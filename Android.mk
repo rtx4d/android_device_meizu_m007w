@@ -7,7 +7,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),beluga)
+ifeq ($(TARGET_DEVICE),m007w)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 include $(call all-makefiles-under,$(LOCAL_PATH))
 include $(CLEAR_VARS)

@@ -5,4 +5,4 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/oppo/beluga
+LOCAL_PATH := device/meizu/m007w

@@ -10,22 +10,19 @@ $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Inherit from beluga device
-$(call inherit-product, device/oppo/beluga/device.mk)
+# Inherit from m007w device
+$(call inherit-product, device/meizu/m007w/device.mk)
 
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, vendor/omni/config/gsm.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := beluga
-PRODUCT_NAME := omni_beluga
-PRODUCT_BRAND := oppo
-PRODUCT_MODEL := beluga
-PRODUCT_MANUFACTURER := oppo
+PRODUCT_DEVICE := m007w
+PRODUCT_NAME := omni_m007w
+PRODUCT_BRAND := meizu
+PRODUCT_MODEL := m007w
+PRODUCT_MANUFACTURER := meizu
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
-    ro.product.device \
-    ro.product.model \
-    ro.product.name \
-    ro.build.product \
+    ro.product.device

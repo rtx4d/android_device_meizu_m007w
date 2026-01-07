@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_beluga.mk
+    $(LOCAL_DIR)/omni_m007w.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_beluga-user \
-    omni_beluga-userdebug \
-    omni_beluga-eng
+    omni_m007w-user \
+    omni_m007w-userdebug \
+    omni_m007w-eng

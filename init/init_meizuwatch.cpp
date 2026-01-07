@@ -39,23 +39,9 @@
 namespace android {
 namespace init {
 
-void load_properties(const char *model) {
-    property_set("ro.product.name", model);
-    property_set("ro.build.product", model);
-    property_set("ro.product.device", model);
-    property_set("ro.product.model", model);
-}
-
+// For Flyme update packages
 void vendor_load_properties() {
-    std::string device_region = android::base::GetProperty("ro.boot.baseband", "");
-    if (device_region == "msm")
-    {
-        load_properties("orca");
-    }
-    else
-    {
-        load_properties("beluga");
-    }
+    property_set("ro.product.device", "meizuWatch");
 }
 
 }  // namespace init

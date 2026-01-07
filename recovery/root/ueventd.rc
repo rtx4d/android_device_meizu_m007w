@@ -40,8 +40,6 @@ subsystem sound
 # format for /sys rules: nodename attr mode uid gid
 # shortcut: "mtd@NN" expands to "/dev/mtd/mtdNN"
 
-#add by zengfanxiang, recovery needs to access swd node, 2019.09.16.
-/dev/swd                  0666   root       root
 /dev/null                 0666   root       root
 /dev/zero                 0666   root       root
 /dev/full                 0666   root       root
@@ -79,7 +77,6 @@ subsystem sound
 /dev/graphics/*           0660   root       graphics
 /dev/msm_hw3dm            0660   system     graphics
 /dev/input/*              0660   root       input
-/dev/v4l-touch*           0660   root       input
 /dev/eac                  0660   root       audio
 /dev/cam                  0660   root       camera
 /dev/pmem                 0660   system     graphics
@@ -137,14 +134,3 @@ subsystem sound
 
 # DVB API device nodes
 /dev/dvb*                 0660   root       system
-
-#ifdef VENDOR_EDIT
-#Jianping.Quan@WSW.BSP.FILESYSTEM, 2020/1/14, change access to opporeserve1 partitions
-/dev/block/mmcblk0p4      0660   system       system
-/dev/block/bootdevice/by-name/opporeserve1 0660   system       system
-
-#ifdef WEAROS_EDIT
-#xiaowei.Zhang@Wear.Android.Framework.Settings, 2020/06/05, Add for user fastboot.
-/dev/block/mmcblk0p30      0660   system       system
-/dev/block/bootdevice/by-name/config 0660   system       system
-#endif WEAROS_EDIT
