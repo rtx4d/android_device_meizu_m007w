@@ -6,3 +6,7 @@
 #
 
 LOCAL_PATH := device/meizu/m007w
+
+PRODUCT_PACKAGES += \
+    qcom_decrypt \
+    qcom_decrypt_fbe
